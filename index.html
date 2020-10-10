@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+    <title>STV Tally</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#607d8b"/>
+    <!-- Created by Siwat Techavoranant -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha256-OweaP/Ic6rsV+lysfyS4h+LM6sRwuO3euTYfr6M124g="
+          crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sarabun', Sans-Serif !important;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+            min-height: 300px;
+            padding-top: 15px;
+        }
+
+        .footer-copyright a {
+            color: lightgrey;
+        }
+
+        .footer-copyright a:hover {
+            text-decoration: underline
+        }
+
+        .fullwidth {
+            width: 100%
+        }
+
+        .sector {
+            margin: 0.5rem 0 1rem 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 3px;
+            background-color: #fff;
+            line-height: 1.8rem;
+            padding: 15px 25px 15px 15px;
+            width: 100%
+        }
+
+        .btn-large {
+            margin-bottom: 0.8rem;
+            overflow: visible;
+            height: auto;
+            min-height: 54px;
+        }
+
+        #output {display: none}
+        #csvInput {height: 12rem}
+    </style>
+</head>
+<body>
+
+<div class="blue-grey white-text" style="padding-top:15px;padding-bottom:20px;line-height:1.5rem;">
+    <div class="container">
+        <h2 class="left-align">STV Tally</h2>
+        <span id="subtitle">by Siwat Techavoranant</span>
+    </div>
+</div>
+
+<main class="container">
+    <blockquote id="output">
+        <h5>Output</h5>
+    </blockquote>
+    <div id="inputBox">
+        <div class="input-field col s6">
+            <input id="seat" type="number" class="validate" required min="1" step="1" max="500" value="1">
+            <label for="seat">Seat</label>
+        </div>
+        <div class="input-field">
+            <p>Tab-separated values</p>
+            <textarea id="csvInput" required></textarea>
+        </div>
+        <a class="waves-effect waves-light btn-large purple fullwidth" id="first-start">Process</a>
+    </div>
+</main>
+
+<footer class="page-footer blue-grey">
+    <div class="footer-copyright">
+        <div class="container">
+            by Siwat Techavoranant
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha256-U/cHDMTIHCeMcvehBv1xQ052bPSbJtbuiw4QA9cTKz0=" crossorigin="anonymous"></script>
+<script src="stv.js" type="application/javascript"></script>
+</body>
+</html>
