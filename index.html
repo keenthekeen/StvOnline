@@ -52,8 +52,13 @@
             min-height: 54px;
         }
 
-        #output {display: none}
-        #csvInput {height: 12rem}
+        #output {
+            display: none
+        }
+
+        #csvInput {
+            height: 12rem
+        }
     </style>
 </head>
 <body>
@@ -61,7 +66,7 @@
 <div class="blue-grey white-text" style="padding-top:15px;padding-bottom:20px;line-height:1.5rem;">
     <div class="container">
         <h2 class="left-align">STV Tally</h2>
-        <span id="subtitle">by Siwat Techavoranant</span>
+        <span id="subtitle">Simple Transferable Vote Counting</span>
     </div>
 </div>
 
@@ -72,11 +77,14 @@
     <div id="inputBox">
         <div class="input-field col s6">
             <input id="seat" type="number" class="validate" required min="1" step="1" max="500" value="1">
-            <label for="seat">Seat</label>
+            <label for="seat">The number of seats to be elected.</label>
         </div>
         <div class="input-field">
-            <p>Tab-separated values</p>
-            <textarea id="csvInput" required></textarea>
+            <p>Ballots, tab-separated</p>
+            <textarea id="csvInput" required placeholder="Chocolate	Strawberry
+Banana	Sweets
+Banana	Sweets
+Banana	Strawberry"></textarea>
         </div>
         <a class="waves-effect waves-light btn-large purple fullwidth" id="first-start">Process</a>
     </div>
@@ -85,7 +93,7 @@
 <footer class="page-footer blue-grey">
     <div class="footer-copyright">
         <div class="container">
-            by Siwat Techavoranant
+            <a href="https://github.com/keenthekeen/StvOnline">Repository</a> | by Siwat Techavoranant
         </div>
     </div>
 </footer>
